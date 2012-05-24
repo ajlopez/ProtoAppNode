@@ -9,7 +9,6 @@
     color: #696969;
 }
 
-
 a
 {
     color: #008000;
@@ -162,7 +161,6 @@ fieldset
 {
     padding: 1em;
     border: none;
-    background-color: #eeeeee;
 }
 
 fieldset.group:after
@@ -428,18 +426,18 @@ div#title
 .display-field,
 .editor-field
 {
-    margin: 0.5em 0;
+/*    margin: 0.5em 0;*/
     color: #202020;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: normal;
 }
 
 .display-label,
 .editor-label
 {
-    margin: 0.5em 0;
+    margin: 0.2em 0;
     color: #000000;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }
 
