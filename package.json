@@ -1,0 +1,16 @@
+{ "name": "protoapp"
+, "description": "Prototype Web Application from a Model"
+, "keywords": [ "model", "express", "nodejs" ]
+, "version": "0.0.1"
+, "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
+, "repository": { "type": "git", "url": "git://github.com/ajlopez/ProtoAppNode.git" }
+, "main": "./lib/protoapp.js"
+, "engines": { "node": ">= 0.6.0 && < 0.9.0" }
+, "scripts": {
+  }
+, "dependencies": {
+	"express": "*" 
+  }
+, "devDependencies": {
+  }
+}
