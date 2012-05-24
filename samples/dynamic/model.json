@@ -44,7 +44,14 @@
 			"name": "customeredit",
 			"title": "Edit Customer",
 			"url": "/customer/edit/:id",
-			"breadcrumb": ["customer"]
+			"content": [
+				{
+					"require": "~/actions.js",
+					"actions": [
+						{ "page": "customer" }
+					]
+				}
+			]
 		},
 		
 		{
