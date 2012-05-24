@@ -5,7 +5,7 @@
     "header": { "file": "./header.html" },
     "footer": { "file": "./footer.html" },
 	
-	"menu": [ "home", "customers", "suppliers", "about" ],
+	"menu": [ "home", "customers", "orders", "about" ],
 	
 	"pages": [
 		{
@@ -73,10 +73,22 @@
 		},
 		
 		{
-			"name": "suppliers",
-			"title": "Suppliers",
-			"url": "/supplier",
-			"content": "<div>No supplier yet</div>"
+			"name": "orders",
+			"title": "Orders",
+			"url": "/order",
+			"content": [
+				{
+					"require": "~/actions.js",
+					"actions": [
+						{ "page": "ordernew" }
+					]
+				}
+				,
+				{
+					"require": "~/entitylist.js",
+					"entity": "order"
+				}
+			]
 		},
 
 		{
@@ -114,6 +126,27 @@
 				{ "id": 1, "name": "Microsoft" },
 				{ "id": 2, "name": "Apple" },
 				{ "id": 3, "name": "Google" }
+			]
+		}
+		,
+		{
+			"name": "order",
+			"setName": "orders",
+			"descriptor": "Order",
+			"setDescriptor": "Orders",
+			"properties": [
+				{ "name": "id", "title": "Id" },
+				{ "name": "description", "title": "Description" },
+				{ "name": "date", "title": "Date" },
+				{ "name": "customerId", "title": "Customer", "reference": "customer" }
+			],
+			"data": [
+				{ "id": 1, "description": "Order #1", "date": "2012-05-01", "customerId": 1 },
+				{ "id": 2, "description": "Order #2", "date": "2012-05-05", "customerId": 1 },
+				{ "id": 3, "description": "Order #3", "date": "2012-05-10", "customerId": 1 },
+				{ "id": 4, "description": "Order #1", "date": "2012-05-01", "customerId": 2 },
+				{ "id": 5, "description": "Order #2", "date": "2012-05-05", "customerId": 2 },
+				{ "id": 6, "description": "Order #3", "date": "2012-05-10", "customerId": 2 }
 			]
 		}
 	]
