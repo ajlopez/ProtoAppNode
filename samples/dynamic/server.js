@@ -4,11 +4,7 @@ var express = require('express');
 
 // Load model
 
-var model = JSON.parse(fs.readFileSync('./model.json').toString());
-
-// Quick hack for require dynamic content from this directory
-
-model.directory = __dirname;
+var model = protoapp.loadModel('./model.json');
 
 // Create application using model
 
