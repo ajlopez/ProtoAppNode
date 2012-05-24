@@ -25,6 +25,26 @@
 			"title": "Suppliers",
 			"url": "/supplier",
 			"content": "<div>No supplier yet</div>"
+		},
+
+		{
+			"name": "now",
+			"title": "Now",
+			"url": "/now",
+			"content": [
+                "<div>Dynamic content page</div>",
+                { "require": "./now.js" }
+            ]
+		},
+
+		{
+			"name": "about",
+			"title": "About",
+			"url": "/about",
+			"content": [
+                "<div>This is the About page</div>",
+                "<div>Its content is multiple</div>"
+            ]
 		}
 	]
 }
