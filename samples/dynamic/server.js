@@ -4,7 +4,7 @@ var express = require('express');
 
 // Load model
 
-var model = protoapp.loadModel('./model.json');
+var model = protoapp.loadModel(__dirname + '/model.json');
 
 // Create application using model
 

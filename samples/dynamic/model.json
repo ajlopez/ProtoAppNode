@@ -19,10 +19,19 @@
 			"name": "customers",
 			"title": "Customers",
 			"url": "/customer",
-			"content": { 
-				"require": "~/entitylist.js",
-				"entity": "customer"
-			}
+			"content": [
+				{
+					"require": "~/actions.js",
+					"actions": [
+						{ "page": "customernew" }
+					]
+				},
+				
+				{
+					"require": "~/entitylist.js",
+					"entity": "customer"
+				}
+			]
 		},
 
 		{
@@ -32,9 +41,28 @@
 		},
 		
 		{
+			"name": "customeredit",
+			"title": "Edit Customer",
+			"url": "/customer/edit/:id",
+			"breadcrumb": ["customer"]
+		},
+		
+		{
 			"name": "customer",
 			"title": "Customer",
-			"url": "/customer/:id"
+			"url": "/customer/:id",
+			"content": [
+				{
+					"require": "~/actions.js",
+					"actions": [
+						{ "page": "customeredit" }
+					]
+				},
+				{ 
+					"require": "~/entityview.js",
+					"entity": "customer"
+				}
+			]
 		},
 		
 		{
@@ -58,6 +86,7 @@
 			"name": "about",
 			"title": "About",
 			"url": "/about",
+			"breadcrumb": ["customers", "suppliers"],
 			"content": [
                 "<div>This is the About page</div>",
                 "<div>Its content is multiple</div>"
